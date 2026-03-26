@@ -1,0 +1,502 @@
+/* ========================================
+   COFOMO TECH - ANIMATIONS & TRANSITIONS
+   ======================================== */
+
+/* ========================================
+   KEYFRAME ANIMATIONS
+   ======================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   ANIMATION UTILITY CLASSES
+   ======================================== */
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease;
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 0.8s ease;
+}
+
+.animate-fade-in-left {
+    animation: fadeInLeft 0.8s ease;
+}
+
+.animate-fade-in-right {
+    animation: fadeInRight 0.8s ease;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.6s ease;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Delay Classes */
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+/* ========================================
+   SCROLL REVEAL ANIMATIONS
+   ======================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease;
+}
+
+.reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ========================================
+   HOVER EFFECTS
+   ======================================== */
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(10, 38, 71, 0.2);
+}
+
+.hover-glow {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.hover-glow::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, #F4A460, #FFB84D);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.hover-glow:hover::after {
+    opacity: 0.5;
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* ========================================
+   LOADING ANIMATIONS
+   ======================================== */
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(10, 38, 71, 0.1);
+    border-top-color: #205295;
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+}
+
+/* ========================================
+   GRADIENT ANIMATIONS
+   ======================================== */
+
+.gradient-animate {
+    background: linear-gradient(-45deg,
+            #0A2647,
+            #144272,
+            #205295,
+            #2C74B3);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ========================================
+   TEXT ANIMATIONS
+   ======================================== */
+
+.typing-effect {
+    overflow: hidden;
+    border-right: 3px solid #F4A460;
+    white-space: nowrap;
+    animation: typing 3s steps(40) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.text-shimmer {
+    background: linear-gradient(90deg,
+            #0A2647 0%,
+            #F4A460 50%,
+            #0A2647 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+}
+
+/* ========================================
+   PAGE TRANSITIONS
+   ======================================== */
+
+.page-transition {
+    animation: fadeIn 0.5s ease;
+}
+
+/* ========================================
+   PARALLAX EFFECT
+   ======================================== */
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ========================================
+   STAGGER ANIMATIONS
+   ======================================== */
+
+.stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.stagger-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.stagger-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.stagger-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.stagger-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.stagger-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.stagger-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* ========================================
+   SMOOTH TRANSITIONS
+   ======================================== */
+
+.smooth-all {
+    transition: all 0.3s ease;
+}
+
+.smooth-transform {
+    transition: transform 0.3s ease;
+}
+
+.smooth-opacity {
+    transition: opacity 0.3s ease;
+}
+
+.smooth-color {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* ========================================
+   HERO 3D VISUAL (simple CSS cube)
+   ======================================== */
+
+.hero {
+    position: relative;
+    overflow: visible;
+}
+
+.hero-visual {
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 320px;
+    height: 220px;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cube-scene {
+    width: 100%;
+    height: 100%;
+    perspective: 900px;
+}
+
+.cube {
+    width: 180px;
+    height: 120px;
+    position: relative;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    animation: cubeRotate 8s linear infinite;
+}
+
+.cube .face {
+    position: absolute;
+    width: 180px;
+    height: 120px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #0A2647, #205295);
+    box-shadow: 0 8px 30px rgba(10, 38, 71, 0.25);
+    opacity: 0.95;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+.cube .front  { transform: translateZ(90px); }
+.cube .back   { transform: rotateY(180deg) translateZ(90px); }
+.cube .right  { transform: rotateY(90deg) translateZ(90px); }
+.cube .left   { transform: rotateY(-90deg) translateZ(90px); }
+.cube .top    { transform: rotateX(90deg) translateZ(60px); height: 180px; width: 180px; }
+.cube .bottom { transform: rotateX(-90deg) translateZ(60px); height: 180px; width: 180px; }
+
+@keyframes cubeRotate {
+    0%   { transform: rotateX(-15deg) rotateY(0deg); }
+    25%  { transform: rotateX(-10deg) rotateY(90deg); }
+    50%  { transform: rotateX(-5deg) rotateY(180deg); }
+    75%  { transform: rotateX(-10deg) rotateY(270deg); }
+    100% { transform: rotateX(-15deg) rotateY(360deg); }
+}
+
+/* make it responsive: hide on small screens */
+@media (max-width: 900px) {
+    .hero-visual { display: none; }
+}

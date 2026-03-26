@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Comprehensive technology services for enterprises - Consulting, Application Development, Platform Solutions, and Managed Services.">
+    <title>Our Services | Cofomo Tech - Enterprise Technology Solutions</title>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" href="assets/images/Logo.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">
+                <img src="assets/images/Logo.jpeg" alt="Cofomo Tech Logo" class="logo-image">
+            </a>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropdown-toggle">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services-consulting.html">Consulting & Services</a></li>
+                        <li><a href="services-application.html">Application Services & Solution</a></li>
+                        <li><a href="services-technologies.html">Technologies & Platform</a></li>
+                        <li><a href="services-managed.html">Managed Services</a></li>
+                        <li><a href="services-professional.html">Professional Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-content">
+            <h1>Our Services</h1>
+            <p>Comprehensive technology solutions for enterprises</p>
+        </div>
+    </section>
+
+    <!-- VIDEO SHOWCASE SECTION -->
+    <section style="background: var(--color-light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See Our Services in Action</h2>
+                <p class="section-subtitle">Watch how we deliver excellence for our clients</p>
+            </div>
+            <div style="display: flex; justify-content: center; margin: 3rem 0;">
+                <div class="reveal" style="width: 100%; max-width: 1200px; height: 600px; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 50px rgba(0,0,0,0.15);">
+                    <div class="video-wrapper" style="position:relative;width:100%;height:100%;">
+                    <video width="100%" height="100%" loop controls style="display: block; width: 100%; height: 100%; background: #000; object-fit: cover;" volume="1">
+                        <source src="assets/Videos/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-play-overlay" aria-label="Play video"></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // overlay play button logic for services video
+        document.addEventListener('DOMContentLoaded', function(){
+            const wrapper = document.querySelector('.video-wrapper');
+            if(wrapper){
+                const video = wrapper.querySelector('video');
+                const overlay = wrapper.querySelector('.video-play-overlay');
+                overlay.addEventListener('click', () => {
+                    if(video.paused){
+                        video.play();
+                        overlay.style.display = 'none';
+                    } else {
+                        video.pause();
+                        overlay.style.display = 'flex';
+                    }
+                });
+                video.addEventListener('play', () => overlay.style.display='none');
+                video.addEventListener('pause', () => overlay.style.display='flex');
+            }
+        });
+    </script>
+
+    <!-- SERVICES GRID -->
+    <section style="background: var(--color-white); color: var(--color-black);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What We Offer</h2>
+                <p class="section-subtitle">End-to-end technology services designed for enterprise excellence</p>
+            </div>
+
+            <div class="card-grid" data-stagger>
+                <!-- Web Application Development -->
+                <div class="card stagger-item reveal hover-lift">
+                    <img src="assets/images/service_webapp.svg" alt="Web Application Development" class="card-icon">
+                    <h3 class="card-title">Web Application Development</h3>
+                    <p class="card-text">Transform your business with powerful, scalable web applications built using
+                        cutting-edge technologies and best practices.</p>
+                    <div class="card-columns">
+                        <ul class="card-list">
+                            <li>Custom Web Applications</li>
+                            <li>Progressive Web Apps (PWA)</li>
+                            <li>API Development & Integration</li>
+                        </ul>
+                        <ul class="card-list">
+                            <li>E-commerce Solutions</li>
+                            <li>Content Management Systems</li>
+                            <li>Database Design & Optimization</li>
+                        </ul>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="badge">React</span>
+                        <span class="badge">Next.js</span>
+                        <span class="badge">Node.js</span>
+                        <span class="badge">Python</span>
+                        <span class="badge">PHP</span>
+                        <span class="badge">Laravel</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Application Development -->
+                <div class="card stagger-item reveal hover-lift">
+                    <img src="assets/images/service_mobile.svg" alt="Mobile Application Development" class="card-icon">
+                    <h3 class="card-title">Mobile Application Development</h3>
+                    <p class="card-text">Create engaging mobile experiences that connect with your audience across iOS
+                        and Android platforms.</p>
+                    <div class="card-columns">
+                        <ul class="card-list">
+                            <li>Native iOS Development</li>
+                            <li>Cross-platform Solutions</li>
+                            <li>App Store Optimization</li>
+                        </ul>
+                        <ul class="card-list">
+                            <li>Native Android Development</li>
+                            <li>Mobile UI/UX Design</li>
+                            <li>Mobile App Maintenance</li>
+                        </ul>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="badge">Swift</span>
+                        <span class="badge">Kotlin</span>
+                        <span class="badge">React Native</span>
+                        <span class="badge">Flutter</span>
+                        <span class="badge">Xamarin</span>
+                    </div>
+                </div>
+
+                <!-- Custom Software Development -->
+                <div class="card stagger-item reveal hover-lift">
+                    <img src="assets/images/service_custom.svg" alt="Custom Software Development" class="card-icon">
+                    <h3 class="card-title">Custom Software Development</h3>
+                    <p class="card-text">Tailored software solutions designed specifically for your business processes
+                        and unique requirements.</p>
+                    <div class="card-columns">
+                        <ul class="card-list">
+                            <li>Enterprise Software Solutions</li>
+                            <li>System Integration</li>
+                            <li>Workflow Automation</li>
+                        </ul>
+                        <ul class="card-list">
+                            <li>Desktop Applications</li>
+                            <li>Legacy System Modernization</li>
+                            <li>Third-party Integrations</li>
+                        </ul>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="badge">Java</span>
+                        <span class="badge">.NET</span>
+                        <span class="badge">Python</span>
+                        <span class="badge">C++</span>
+                        <span class="badge">Electron</span>
+                        <span class="badge">Qt</span>
+                    </div>
+                </div>
+
+                <!-- Testing Services -->
+                <div class="card stagger-item reveal hover-lift">
+                    <img src="assets/images/service_testing.svg" alt="Testing Services" class="card-icon">
+                    <h3 class="card-title">Testing Services</h3>
+                    <p class="card-text">Comprehensive testing solutions to ensure your software meets the highest
+                        standards of quality and reliability.</p>
+                    <div class="card-columns">
+                        <ul class="card-list">
+                            <li>Automated Testing</li>
+                            <li>Performance Testing</li>
+                            <li>Mobile App Testing</li>
+                        </ul>
+                        <ul class="card-list">
+                            <li>Manual Testing</li>
+                            <li>Security Testing</li>
+                            <li>API Testing</li>
+                        </ul>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="badge">Selenium</span>
+                        <span class="badge">Cypress</span>
+                        <span class="badge">Jest</span>
+                        <span class="badge">JMeter</span>
+                        <span class="badge">Postman</span>
+                        <span class="badge">TestRail</span>
+                    </div>
+                </div>
+
+                <!-- Cloud Services -->
+                <div class="card stagger-item reveal hover-lift">
+                    <img src="assets/images/service_cloud.svg" alt="Cloud Services" class="card-icon">
+                    <h3 class="card-title">Cloud Services</h3>
+                    <p class="card-text">Scale your business with cloud migration, deployment, and management services
+                        on leading platforms.</p>
+                    <div class="card-columns">
+                        <ul class="card-list">
+                            <li>Cloud Migration Strategy</li>
+                            <li>Azure Services</li>
+                            <li>Containerization</li>
+                        </ul>
+                        <ul class="card-list">
+                            <li>AWS Solutions</li>
+                            <li>DevOps Implementation</li>
+                            <li>Cloud Security</li>
+                        </ul>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="badge">AWS</span>
+                        <span class="badge">Azure</span>
+                        <span class="badge">Docker</span>
+                        <span class="badge">Kubernetes</span>
+                        <span class="badge">Jenkins</span>
+                        <span class="badge">Terraform</span>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="card stagger-item reveal hover-lift">
+                    <img src="assets/images/service_marketing.svg" alt="Digital Marketing" class="card-icon">
+                    <h3 class="card-title">Digital Marketing</h3>
+                    <p class="card-text">Strategic digital marketing services to boost your online presence and drive
+                        business growth.</p>
+                    <div class="card-columns">
+                        <ul class="card-list">
+                            <li>SEO Optimization</li>
+                            <li>Content Marketing</li>
+                            <li>Email Marketing</li>
+                        </ul>
+                        <ul class="card-list">
+                            <li>Social Media Marketing</li>
+                            <li>PPC Campaigns</li>
+                            <li>Analytics & Reporting</li>
+                        </ul>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="badge">Google Ads</span>
+                        <span class="badge">SEO Tools</span>
+                        <span class="badge">Analytics</span>
+                        <span class="badge">Social Media</span>
+                        <span class="badge">CRM</span>
+                    </div>
+                </div>
+
+                <!-- Data Analytics & BI -->
+                <div class="card stagger-item reveal hover-lift">
+                    <img src="assets/images/service_data.svg" alt="Data Analytics & BI" class="card-icon">
+                    <h3 class="card-title">Data Analytics & BI</h3>
+                    <p class="card-text">Transform your data into actionable insights with advanced analytics and
+                        business intelligence solutions.</p>
+                    <div class="card-columns">
+                        <ul class="card-list">
+                            <li>Data Warehousing</li>
+                            <li>Predictive Analytics</li>
+                            <li>Real-time Dashboards</li>
+                        </ul>
+                        <ul class="card-list">
+                            <li>Business Intelligence</li>
+                            <li>Data Visualization</li>
+                            <li>Big Data Solutions</li>
+                        </ul>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="badge">Power BI</span>
+                        <span class="badge">Tableau</span>
+                        <span class="badge">Python</span>
+                        <span class="badge">R</span>
+                        <span class="badge">SQL</span>
+                        <span class="badge">Apache Spark</span>
+                    </div>
+                </div>
+
+                <!-- UI/UX Design -->
+                <div class="card stagger-item reveal hover-lift">
+                    <img src="assets/images/service_uiux.svg" alt="UI/UX Design" class="card-icon">
+                    <h3 class="card-title">UI/UX Design</h3>
+                    <p class="card-text">Create beautiful, intuitive interfaces that enhance user experience and drive
+                        engagement.</p>
+                    <div class="card-columns">
+                        <ul class="card-list">
+                            <li>User Research</li>
+                            <li>Visual Design</li>
+                            <li>Usability Testing</li>
+                        </ul>
+                        <ul class="card-list">
+                            <li>Wireframing & Prototyping</li>
+                            <li>Interaction Design</li>
+                            <li>Design Systems</li>
+                        </ul>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="badge">Figma</span>
+                        <span class="badge">Adobe XD</span>
+                        <span class="badge">Sketch</span>
+                        <span class="badge">InVision</span>
+                        <span class="badge">Principle</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section style="background: var(--gradient-primary); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 1rem;">Need a Custom Solution?</h2>
+            <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
+                Our experts are ready to design a tailored technology strategy for your unique business needs.
+            </p>
+            <a href="contact.html" class="btn btn-secondary">Contact Our Team</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>COFOMO<span style="color: var(--color-white);">TECH</span></h4>
+                <p>Leading  technology solutions provider, delivering innovation and excellence.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/cofomotech/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://x.com/home" target="_blank" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/1C1BhffUDk/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/cofomotech/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <a href="services-consulting.html">Consulting & Services</a>
+                <a href="services-application.html">Application Services</a>
+                <a href="services-technologies.html">Technologies & Platform</a>
+                <a href="services-managed.html">Managed Services</a>
+                <a href="services-professional.html">Professional Services</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="projects.html">Our Projects</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fa-solid fa-map-marker-alt" style="margin-right: 8px;"></i> #3-535 5th floor, LR Tower, 100 Feet Road, Ayyappa Society, Madhapur<br>Hyderabad - 500081</p>
+                <p><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> info@cofomotech.com</p>
+                <p><i class="fa-solid fa-phone" style="margin-right: 8px;"></i> +91 9133436317</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cofomo Tech. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+
+</body>
+
+</html>

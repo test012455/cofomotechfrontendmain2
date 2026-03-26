@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply | Cofomo Tech</title>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="assets/images/Logo.jpeg" type="image/jpeg">
+</head>
+
+<body style="background: #fff; color: #1A1A1A;">
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">
+                <img src="assets/images/Logo.jpeg" alt="Cofomo Tech Logo" class="logo-image">
+            </a>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropdown-toggle">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services-consulting.html">Consulting & Services</a></li>
+                        <li><a href="services-application.html">Application Services & Solution</a></li>
+                        <li><a href="services-technologies.html">Technologies & Platform</a></li>
+                        <li><a href="services-managed.html">Managed Services</a></li>
+                        <li><a href="services-professional.html">Professional Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 40vh; background: var(--gradient-primary); color: #fff; display:flex; align-items:center;">
+        <div class="container" style="margin-top: 3rem;">
+            <h1>Apply to Cofomo Tech</h1>
+            <p>Submit your application and we will get back to you.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container" style="max-width:800px; margin: 0.5rem auto 3rem auto;">
+            <form action="" method="post" enctype="multipart/form-data" id="apply-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <!-- backend expects full_name -->
+                    <input type="text" id="name" name="full_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="position">Position Applying For</label>
+                    <input type="text" id="position" name="position" required>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Resume (PDF, DOC, DOCX)</label>
+                    <input type="file" id="resume" name="resume" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                </div>
+                <div class="form-group">
+                    <label for="cover_letter">Cover Letter / Message</label>
+                    <!-- send as cover_letter in backend -->
+                    <textarea id="cover_letter" name="cover_letter" rows="6"></textarea>
+                </div>
+                <div style="text-align:center; margin-top:1.5rem;">
+                    <button class="btn btn-primary" type="submit">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>COFOMO<span style="color: var(--color-white);">TECH</span></h4>
+                <p>Leading  technology solutions provider, delivering innovation and excellence.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/cofomotech/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://x.com/home" target="_blank" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/1C1BhffUDk/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/cofomotech/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <a href="services-consulting.html">Consulting & Services</a>
+                <a href="services-application.html">Application Services</a>
+                <a href="services-technologies.html">Technologies & Platform</a>
+                <a href="services-managed.html">Managed Services</a>
+                <a href="services-professional.html">Professional Services</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="projects.html">Our Projects</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fa-solid fa-map-marker-alt" style="margin-right: 8px;"></i> #3-535 5th floor, LR Tower, 100 Feet Road, Ayyappa Society, Madhapur<br>Hyderabad - 500081</p>
+                <p><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> info@cofomotech.com</p>
+                <p><i class="fa-solid fa-phone" style="margin-right: 8px;"></i> +91 9133436317</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cofomo Tech. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <!-- application logic is handled in js/main.js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
